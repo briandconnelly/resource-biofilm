@@ -1,6 +1,10 @@
-# Materials for Resource Abundance and the Critical Transition to Cooperation
+# Materials for *Resource Abundance and the Critical Transition to Cooperation*
 
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+
+This repository contains data, configuration files, and analysis scripts related to *Resource Abundance and the Critical Transition to Cooperation*.
+To ensure reproducibility, [Avida](http://avida.devosoft.org) version 2.12.4, which was used for this work, is also provided.
+Protocols used for the microbial experiments are described in the paper.
 
 
 ## Contents
