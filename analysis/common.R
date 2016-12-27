@@ -2,14 +2,6 @@ library(cowplot)
 library(tidyverse)
 library(ggplot2bdc)
 
-# TODO remove these
-#library(cowplot)
-#library(dplyr)
-#library(magrittr)
-#library(ggplot2)
-#library(ggplot2bdc)
-#library(scales)
-
 source("analysis/formatting.R")
 
 source("analysis/theme_rescoop.R")
