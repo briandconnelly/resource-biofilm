@@ -1,0 +1,13 @@
+#!/usr/bin/env Rscript
+
+source("analysis/common.R")
+
+growthdata <- read_csv(file = "data/vc_WT_growth.csv")
+
+vc_growplot <- ggplot(data = growthdata, aes(x = Media, y = Growth)) +
+    stat_summary(fun.data = "mean_cl_boot") +
+    scale_x_continuous(trans = "log2", breaks = c(0.25, 0.5, 1.0, 2.0)) +
+    labs(x = label_lb_concentration, y = label_yield)
+
+ggsave_golden(filename = "figures/vc_growth_WT.pdf",
+              plot = gg_rescale_golden(vc_growplot))
