@@ -1,6 +1,6 @@
 # Materials for Resource Abundance and the Critical Transition to Cooperation
 
-[![Project Status: Inactive - The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](http://www.repostatus.org/badges/latest/inactive.svg)](http://www.repostatus.org/#inactive)
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
 
 ## Contents
@@ -33,6 +33,6 @@ These subdirectories may contain additional information:
 
 ## License
 
-Data: [Creative Commons Attribution License (CC-BY)](https://creativecommons.org/licenses/by/4.0/)
-Code: [MIT](https://opensource.org/licenses/MIT)
-Avida: [GNU Lesser General Public License](https://www.gnu.org/licenses/lgpl.html)
+Data, configuration files, and figures are released under a [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+Analysis code is released under the [MIT license](https://opensource.org/licenses/MIT).
+Avida is released under the [GNU Lesser General Public License](https://www.gnu.org/licenses/lgpl.html)
