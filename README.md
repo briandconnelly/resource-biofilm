@@ -35,6 +35,11 @@ These subdirectories may contain additional information:
 | [S4](figures/vc_growth_WT.pdf) | [data/vc_WT_growth.csv](data/vc_WT_growth.csv) | [analysis/plot_vc_growth.R](analysis/plot_vc_growth.R) |
 
 
+## Funding
+
+This work was supported in part by [National Science Foundation](https://www.nsf.gov) grants [CNS-1059373](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1059373), [CNS-0915855](https://www.nsf.gov/awardsearch/showAward?AWD_ID=0915855), [DBI-0939454](https://www.nsf.gov/awardsearch/showAward?AWD_ID=0939454), [CCF-0820220](https://www.nsf.gov/awardsearch/showAward?AWD_ID=0820220), [CNS-0751155](https://www.nsf.gov/awardsearch/showAward?AWD_ID=0751155), [DBI-1309318](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1309318); and [National Institutes of Health](https://www.nih.gov) grants [R01-GM109259](https://projectreporter.nih.gov/project_info_description.cfm?aid=9102193) and R01-GM110444. 
+
+
 ## License
 
 Data, configuration files, and figures are released under a [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
