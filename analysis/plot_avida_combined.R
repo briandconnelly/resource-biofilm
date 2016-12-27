@@ -12,8 +12,8 @@ coopdata <- read_csv("data/cooperators.csv.bz2") %>%
 coopplot <- ggplot(data = coopdata,
                    aes(x = Resource, y = Frac_Cooperators)) +
     stat_summary(fun.data = "mean_cl_boot") +
-    scale_x_continuous(trans = "log2", breaks = c(2,4,8,16,32,64,128)) +
-    scale_y_continuous(limits = c(0,1), breaks = c(0, 0.25, 0.5, 0.75, 1),
+    scale_x_continuous(trans = "log2", breaks = 2^(1:7)) +
+    scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.25, 0.5, 0.75, 1),
                        labels = c("0", "", "0.5", "", "1.0")) +
     labs(x = label_resource, y = "Cooperator\nProportion") +
     theme(axis.title.x = element_blank(), axis.text.x = element_blank()) +
@@ -31,8 +31,8 @@ epsplot <- ggplot(data = epsdata, aes(x = Resource, y = Level)) +
     geom_hline(yintercept = 3, linetype = "dotted", size = 0.5,
                color = "grey70") +
     stat_summary(fun.data = "mean_cl_boot") +
-    scale_y_continuous(breaks = c(0,3,6,9)) +
-    scale_x_continuous(trans = "log2", breaks = c(2,4,8,16,32,64,128)) +
+    scale_y_continuous(breaks = c(0, 3, 6, 9)) +
+    scale_x_continuous(trans = "log2", breaks = 2^(1:7)) +
     labs(x = label_resource, y = label_public_good) +
     theme(axis.title.x = element_blank(), axis.text.x = element_blank()) +
     theme(plot.margin = margin(0, 6, 2, 20))
@@ -47,8 +47,8 @@ killdata <- read_csv("data/kills.csv.bz2") %>%
 
 killplot <- ggplot(data = killdata, aes(x = Resource, y = Frac_Survived)) +
     stat_summary(fun.data = "mean_cl_boot") +
-    scale_x_continuous(trans = "log2", breaks = c(2,4,8,16,32,64,128)) +
-    scale_y_continuous(limits = c(0,1), breaks = c(0, 0.25, 0.5, 0.75, 1),
+    scale_x_continuous(trans = "log2", breaks = 2^(1:7)) +
+    scale_y_continuous(limits = c(0, 1), breaks = c(0, 0.25, 0.5, 0.75, 1),
                        labels = c("0", "", "0.5", "", "1.0")) +
     labs(x = label_resource, y = "Fraction\nSurviving") +
     theme(axis.title.x = element_blank(), axis.text.x = element_blank()) +
@@ -60,7 +60,7 @@ killplot <- ggplot(data = killdata, aes(x = Resource, y = Frac_Survived)) +
 
 data_eps <- read_csv("data/popsizes.csv.bz2")
 data_eps$EPS <- TRUE
-data_noEPS <-read.csv("data/popsizes_noEPS.csv.bz2")
+data_noEPS <- read_csv("data/popsizes_noEPS.csv.bz2")
 data_noEPS$EPS <- FALSE
 
 popsizedata <- bind_rows(data_eps, data_noEPS) %>%
@@ -71,11 +71,11 @@ popsizedata <- bind_rows(data_eps, data_noEPS) %>%
 num_cells <- 10000
 
 sizeplot <- ggplot(data = popsizedata,
-                   aes(x = Resource, y = Organisms/num_cells, shape = EPS,
+                   aes(x = Resource, y = Organisms / num_cells, shape = EPS,
                        color = EPS)) +
     stat_summary(fun.data = "mean_cl_boot") +
-    scale_x_continuous(trans = "log2", breaks = c(2,4,8,16,32,64,128)) +
-    scale_y_continuous(limits = c(NA,1)) +
+    scale_x_continuous(trans = "log2", breaks = 2^(1:7)) +
+    scale_y_continuous(limits = c(NA, 1)) +
     scale_shape_manual(breaks = c(TRUE, FALSE), values = eps_shapes,
                        labels = eps_labels, name = eps_name) +
     scale_color_manual(breaks = c(TRUE, FALSE), values = eps_colors,
@@ -89,7 +89,7 @@ sizeplot <- ggplot(data = popsizedata,
 
 pall <- plot_grid(coopplot, epsplot, killplot, sizeplot,
                   align = "v", nrow = 4,
-                  rel_heights = c(1,1,1,1.3), rel_widths = 3,
+                  rel_heights = c(1, 1, 1, 1.3), rel_widths = 3,
                   labels = c("(a)", "(b)", "(c)", "(d)"), label_size = 18,
                   hjust = 0.0)
 ggsave(filename = "figures/avida_combined.pdf", plot = pall, width = 7.0)

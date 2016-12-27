@@ -13,7 +13,7 @@ alldata$Type <- factor(alldata$Type, levels = c("Cooperator", "Cheater"))
 res_labels <- c("10" = "(a) Resource Level 10", "30" = "(b) Resource Level 30")
 
 p_stack <- ggplot(data = alldata,
-                  aes(x = Update/1000, y = Abundance, color = Type,
+                  aes(x = Update / 1000, y = Abundance, color = Type,
                       fill = Type)) +
     geom_area(position = "stack") +
     facet_grid(~ Resource, labeller = labeller(Resource = res_labels)) +
