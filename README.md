@@ -23,7 +23,7 @@ These subdirectories may contain additional information:
 | 3       | (a) [data/coop_cheats_r010_411.csv](data/coop_cheats_r010_411.csv), (b) [data/coop_cheats_r030_411.csv](data/coop_cheats_r030_411.csv) | [analysis/plot_avida_popstacks.R](analysis/plot_avida_popstacks.R) | [figures/avida_population_stacks.pdf](figures/avida_population_stacks.pdf) |
 | 4       | [data/fluctuation_treatments.csv](data/fluctuation_treatments.csv), [data/fluctuation_cooppct.csv](data/fluctuation_cooppct.csv) | [analysis/plot_avida_fluctuation.R](analysis/plot_avida_fluctuation.R) | [figures/avida_fluctuation_cooppct.pdf](figures/avida_fluctuation_cooppct.pdf) |
 | 5       | [data/vc_wt_7d_biofilm.csv](data/vc_wt_7d_biofilm.csv) | [analysis/plot_vc_biofilm.R](analysis/plot_vc_biofilm.R) | [figures/vc_biofilm_7dWT.pdf](figures/vc_biofilm_7dWT.pdf) |
-| 6       | TODO           | TODO          | [figures/TODO.pdf](figures/TODO.pdf) |
+| 6       | [data/vc_frac_rugose.csv](data/vc_frac_rugose.csv) | [analysis/plot_vc_rugose.R](analysis/plot_vc_rugose.R) | [figures/vc_frac_rugose.pdf](figures/vc_frac_rugose.pdf), inset: [figures/rugose_smooth.png](figures/rugose_smooth.png) |
 | 7       | TODO           | TODO          | [figures/TODO.pdf](figures/TODO.pdf) |
 | S1      | TODO           | TODO          | [figures/population-0092900.pdf](figures/population-0092900.pdf) |
 | S2      | TODO           | TODO          | [figures/avida_cooperators_trajectories.pdf](figures/avida_cooperators_trajectories.pdf) |
