@@ -9,9 +9,7 @@ Protocols used for the microbial experiments are described in the paper.
 
 ## Contents
 
-These subdirectories may contain additional information:
-
-* [analysis](analysis) - Scripts for analyzing and plotting [result data](data)
+* [analysis](analysis) - Scripts for analyzing and plotting result data
 * [avida](avida) - Source code for Avida 2.12.4
 * [configuration](configuration) - Configuration files for reported simulations
 * [data](data) - Result data sets
@@ -44,4 +42,4 @@ This work was supported in part by [National Science Foundation](https://www.nsf
 
 Data, configuration files, and figures are released under a [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 Analysis code is released under the [MIT license](https://opensource.org/licenses/MIT).
-Avida is released under the [GNU Lesser General Public License](https://www.gnu.org/licenses/lgpl.html)
+Avida is released under the [GNU Lesser General Public License](https://www.gnu.org/licenses/lgpl.html).
