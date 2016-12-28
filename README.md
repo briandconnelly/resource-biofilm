@@ -20,7 +20,7 @@ Protocols used for the microbial experiments are described in the paper.
 
 | Figure  | Data File(s)   | Analysis      | 
 |:--------|:---------------|:--------------|
-| [1](figures/avida_diagram.png) | N/A            | N/A           |
+| [1](figures/avida_diagram.tiff) | N/A            | N/A           |
 | [2](figures/avida_combined.pdf) | (a) [data/cooperators.csv.bz2](data/cooperators.csv.bz2)<br>(b) [data/eps.csv.bz2](data/eps.csv.bz2)<br>(c) [data/kills.csv.bz2](data/kills.csv.bz2)<br>(d) [data/popsizes.csv.bz2](data/popsizes.csv.bz2), [data/popsizes_noEPS.csv.bz2](data/popsizes_noEPS.csv.bz2) | [analysis/plot_avida_combined.R](analysis/plot_avida_combined.R) |
 | [3](figures/avida_population_stacks.pdf) | (a) [data/coop_cheats_r010_411.csv](data/coop_cheats_r010_411.csv)<br>(b) [data/coop_cheats_r030_411.csv](data/coop_cheats_r030_411.csv) | [analysis/plot_avida_popstacks.R](analysis/plot_avida_popstacks.R) |
 | [4](figures/avida_fluctuation_cooppct.pdf) | [data/fluctuation_treatments.csv](data/fluctuation_treatments.csv), [data/fluctuation_cooppct.csv](data/fluctuation_cooppct.csv) | [analysis/plot_avida_fluctuation.R](analysis/plot_avida_fluctuation.R) |
