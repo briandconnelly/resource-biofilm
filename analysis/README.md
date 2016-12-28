@@ -12,6 +12,13 @@ This directory contains analysis and plotting scripts.
 - [grid](https://cran.r-project.org/package=grid) (version 3.3.2 used)
 - [scales](https://cran.r-project.org/package=scales) (version 0.4.1 used)
 
+These packages can be installed using the following commands in R:
+
+```r
+install.packages(c("cowplot", "tidyverse", "png", "grid", "scales", "devtools"))
+devtools::install_github("briandconnelly/ggplot2bdc")
+```
+
 
 ## License
 
