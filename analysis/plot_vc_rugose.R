@@ -20,4 +20,4 @@ vc_rugoseplot <- ggplot(data = rugosedata, aes(x = Media, y = Frac_Rugose)) +
 
 ggsave(filename = "figures/vc_frac_rugose.pdf", plot = vc_rugoseplot)
 
-#system("pdfcrop --margin 1 figures/vc_frac_rugose.pdf figures/vc_frac_rugose.pdf")
+#system("pdfcrop --margins 1 figures/vc_frac_rugose.pdf figures/vc_frac_rugose.pdf")

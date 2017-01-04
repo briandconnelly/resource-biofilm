@@ -28,14 +28,14 @@ end_reps <- react_end %>%
 firstorn <- react_all %>%
     filter(EPS > 0) %>%
     group_by(Resource, Replicate) %>%
-    summarize(FirstTime = min(Update))
-firstorn$Task <- "ORN"
+    summarize(FirstTime = min(Update)) %>%
+    mutate(Task = "ORN")
 
 firstequ <- react_all %>%
     filter(EQU > 0) %>%
     group_by(Resource, Replicate) %>%
-    summarize(FirstTime = min(Update))
-firstequ$Task <- "EQU"
+    summarize(FirstTime = min(Update)) %>%
+    mutate(Task = "EQU")
 
 firsttimes_raw <- bind_rows(firstorn, firstequ)
 firsttimes_raw$Task <- factor(firsttimes_raw$Task, levels = c("ORN", "EQU"),
@@ -54,7 +54,8 @@ pfirst <- ggplot(data = first_times,
     scale_x_continuous(trans = "log2", breaks = 2^(1:6)) +
     scale_y_log10() +
     scale_color_manual(values = c("black", "grey60")) +
-    labs(x = label_resource, y = "Time to First Completion")
+    labs(x = label_resource, y = "Time to First Completion") +
+    theme(aspect.ratio = 0.45)
 
 
 # How many replicate populations EVER got ORN/EQU? ---------------------------
@@ -78,23 +79,25 @@ pprop <- ggplot(data = pop_did_task, aes(x = Resource,
     scale_x_continuous(trans = "log2", breaks = 2^(1:6)) +
     scale_y_continuous(limits = c(0, 1)) +
     scale_color_manual(values = c("black", "grey60")) +
-    labs(x = label_resource, y = "Proportion of Populations")
+    labs(x = label_resource, y = "Proportion of Populations") +
+    theme(aspect.ratio = 0.45)
 
 
 # Plot both -------------------------------------
 
-# Flipped
-ppropY <- gg_rescale(plot = pprop, ratio = 2) +
+ppropY <- pprop +
     theme(axis.title.x = element_blank()) +
-    theme(plot.margin = margin(0, 6, -2, 32))
-pfirstY <- gg_rescale(plot = pfirst, ratio = 2) +
+    theme(plot.margin = margin(-30, 6, -40, 32))
+pfirstY <- pfirst +
     scale_color_manual(values = c("black", "grey60"), guide = FALSE) +
     theme(axis.title.y = element_text(size = rel(0.9))) +
     theme(plot.margin = margin(0, 6, 0, 20))
 
-pboth2 <- plot_grid(ppropY, pfirstY, nrow = 2, ncol = 1,
+pboth <- plot_grid(ppropY, pfirstY, nrow = 2, ncol = 1,
                     rel_widths = 1, rel_heights = c(1, 1.02),
                     labels = c("(a)", "(b)"), label_size = 18)
 
-ggsave(filename = "figures/avida_reactions_ORN_EQU.pdf",
-       plot = pboth2, width = 7)
+ggsave(filename = "figures/avida_reactions_ORN_EQU.pdf", plot = pboth,
+       width = 7)
+
+#system("pdfcrop --margins 1 figures/avida_reactions_ORN_EQU.pdf figures/avida_reactions_ORN_EQU.pdf")

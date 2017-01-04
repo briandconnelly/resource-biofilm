@@ -12,4 +12,4 @@ vc_growplot <- ggplot(data = growthdata, aes(x = Media, y = Growth)) +
 
 ggsave(filename = "figures/vc_growth_WT.pdf", plot = vc_growplot)
 
-#system("pdfcrop --margin 1 figures/vc_growth_WT.pdf figures/vc_growth_WT.pdf")
+#system("pdfcrop --margins 1 figures/vc_growth_WT.pdf figures/vc_growth_WT.pdf")

@@ -22,4 +22,4 @@ vc_epsplot <- ggplot(data = vcepsdata,
 
 ggsave(filename = "figures/vc_biofilm_7dWT.pdf", plot = vc_epsplot)
 
-#system("pdfcrop --margin 1 figures/vc_biofilm_7dWT.pdf figures/vc_biofilm_7dWT.pdf")
+#system("pdfcrop --margins 1 figures/vc_biofilm_7dWT.pdf figures/vc_biofilm_7dWT.pdf")
