@@ -17,7 +17,9 @@ vc_epsplot <- ggplot(data = vcepsdata,
                        name = strain_name) +
     scale_color_manual(values = strain_colors,
                        labels = strain_labels, name = strain_name) +
-    labs(x = label_lb_concentration, y = label_biofilm)
+    labs(x = label_lb_concentration, y = label_biofilm) +
+    theme(aspect.ratio = 2 / (1 + sqrt(5)))
 
-ggsave_golden(filename = "figures/vc_biofilm_7dWT.pdf",
-              plot = gg_rescale_golden(vc_epsplot))
+ggsave(filename = "figures/vc_biofilm_7dWT.pdf", plot = vc_epsplot)
+
+#system("pdfcrop --margin 1 figures/vc_biofilm_7dWT.pdf figures/vc_biofilm_7dWT.pdf")
