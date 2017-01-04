@@ -19,6 +19,8 @@ install.packages(c("cowplot", "tidyverse", "png", "grid", "scales", "devtools"))
 devtools::install_github("briandconnelly/ggplot2bdc")
 ```
 
+Figures were cropped prior to publication with [pdfcrop](http://www.ctan.org/pkg/pdfcrop).
+
 
 ## License
 

@@ -31,7 +31,8 @@ d <- read_csv(
 pFCoopPct <- ggplot(data = d, aes(x = Update / 1000, y = Frac_Cooperators)) +
     facet_grid(Treatment ~ .) +
     geom_rect(data = treatments,
-              aes(xmin = Start / 1000, xmax = End / 1000, ymin = 0, ymax = 1,
+              aes(xmin = Start / 1000, xmax = End / 1000,
+                  ymin = -Inf, ymax = Inf,
                   fill = Resource),
               color = NA, alpha = 0.5) +
     stat_summary(fun.data = "mean_cl_boot", geom = "ribbon", color = NA,
@@ -39,12 +40,17 @@ pFCoopPct <- ggplot(data = d, aes(x = Update / 1000, y = Frac_Cooperators)) +
     stat_summary(fun.y = "mean", geom = "line") +
     geom_text(data = treatments,
               aes(label = Resource, x = (Start + ((End - Start) / 2)) / 1000),
-              y = 0.97, hjust = 0.5, vjust = 1, size = 3, fontface = "italic") +
-    scale_y_continuous(limits = c(0, 1)) +
+              y = 1.0, hjust = 0.5, vjust = 1, size = 3, fontface = "italic") +
+    scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.25),
+                       labels = c("0.0", "", "0.5", "", "1.0")) +
     scale_fill_manual(values = c("10" = "grey90", "40" = "grey60"),
                       guide = FALSE) +
     labs(x = label_time, y = label_cooppct) +
-    theme(strip.text = element_blank())
+    theme(aspect.ratio = 1/4) +
+    theme(strip.text = element_blank()) +
+    theme(axis.text = element_text(size = rel(0.8)))
 
 ggsave_golden(filename = "figures/avida_fluctuation_cooppct.pdf",
               plot = pFCoopPct)
+
+#system("pdfcrop --margin 1 figures/avida_fluctuation_cooppct.pdf figures/avida_fluctuation_cooppct.pdf")
