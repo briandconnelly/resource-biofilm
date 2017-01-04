@@ -50,7 +50,6 @@ pFCoopPct <- ggplot(data = d, aes(x = Update / 1000, y = Frac_Cooperators)) +
     theme(strip.text = element_blank()) +
     theme(axis.text = element_text(size = rel(0.8)))
 
-ggsave_golden(filename = "figures/avida_fluctuation_cooppct.pdf",
-              plot = pFCoopPct)
+ggsave(filename = "figures/avida_fluctuation_cooppct.pdf", plot = pFCoopPct)
 
 #system("pdfcrop --margin 1 figures/avida_fluctuation_cooppct.pdf figures/avida_fluctuation_cooppct.pdf")
