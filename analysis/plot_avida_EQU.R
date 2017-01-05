@@ -99,5 +99,4 @@ pboth <- plot_grid(ppropY, pfirstY, nrow = 2, ncol = 1,
 
 ggsave(filename = "figures/avida_reactions_ORN_EQU.pdf", plot = pboth,
        width = 7)
-
-#system("pdfcrop --margins 1 figures/avida_reactions_ORN_EQU.pdf figures/avida_reactions_ORN_EQU.pdf")
+trim_whitespace(filename = "figures/avida_reactions_ORN_EQU.pdf", margins = 1)

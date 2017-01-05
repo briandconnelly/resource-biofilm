@@ -51,5 +51,4 @@ pFCoopPct <- ggplot(data = d, aes(x = Update / 1000, y = Frac_Cooperators)) +
     theme(axis.text = element_text(size = rel(0.8)))
 
 ggsave(filename = "figures/avida_fluctuation_cooppct.pdf", plot = pFCoopPct)
-
-#system("pdfcrop --margins 1 figures/avida_fluctuation_cooppct.pdf figures/avida_fluctuation_cooppct.pdf")
+trim_whitespace(filename = "figures/avida_fluctuation_cooppct.pdf", margins = 1)

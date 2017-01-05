@@ -111,5 +111,4 @@ pall <- plot_grid(pbiofilm, pcomp, pBCFU, align = "h", nrow = 1, ncol = 3,
 
 ggsave(filename = "figures/vc_evolved_combined.pdf", plot = pall,
        width = 10, height = 6)
-
-#system("pdfcrop --margins 1 figures/vc_evolved_combined.pdf figures/vc_evolved_combined.pdf")
+trim_whitespace(filename = "figures/vc_evolved_combined.pdf", margins = 1)

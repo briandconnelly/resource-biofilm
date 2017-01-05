@@ -21,5 +21,4 @@ vc_epsplot <- ggplot(data = vcepsdata,
     theme(aspect.ratio = 2 / (1 + sqrt(5)))
 
 ggsave(filename = "figures/vc_biofilm_7dWT.pdf", plot = vc_epsplot)
-
-#system("pdfcrop --margins 1 figures/vc_biofilm_7dWT.pdf figures/vc_biofilm_7dWT.pdf")
+trim_whitespace(filename = "figures/vc_biofilm_7dWT.pdf", margins = 1)

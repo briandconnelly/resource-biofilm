@@ -11,5 +11,4 @@ vc_growplot <- ggplot(data = growthdata, aes(x = Media, y = Growth)) +
     theme(aspect.ratio = 2 / (1 + sqrt(5)))
 
 ggsave(filename = "figures/vc_growth_WT.pdf", plot = vc_growplot)
-
-#system("pdfcrop --margins 1 figures/vc_growth_WT.pdf figures/vc_growth_WT.pdf")
+trim_whitespace(filename = "figures/vc_growth_WT.pdf", margins = 1)

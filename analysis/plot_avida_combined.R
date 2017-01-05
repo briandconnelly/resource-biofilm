@@ -93,5 +93,4 @@ pall <- plot_grid(coopplot, epsplot, killplot, sizeplot,
                   labels = c("(a)", "(b)", "(c)", "(d)"), label_size = 18,
                   hjust = 0.0)
 ggsave(filename = "figures/avida_combined.pdf", plot = pall, width = 7.0)
-
-#system("pdfcrop --margins 1 figures/avida_combined.pdf figures/avida_combined.pdf")
+trim_whitespace(filename = "figures/avida_combined.pdf", margins = 1)

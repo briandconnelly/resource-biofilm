@@ -19,5 +19,4 @@ vc_rugoseplot <- ggplot(data = rugosedata, aes(x = Media, y = Frac_Rugose)) +
     theme(aspect.ratio = 2 / (1 + sqrt(5)))
 
 ggsave(filename = "figures/vc_frac_rugose.pdf", plot = vc_rugoseplot)
-
-#system("pdfcrop --margins 1 figures/vc_frac_rugose.pdf figures/vc_frac_rugose.pdf")
+trim_whitespace(filename = "figures/vc_frac_rugose.pdf", margins = 1)

@@ -11,16 +11,16 @@ label_react_count <- "Task Completions"
 label_react_count_norm <- "Normalized Task Completions"
 label_occupied_cells <- "Fraction of Occupied Cells"
 
-struct_labels <- c("TRUE"="Structured", "FALSE"="Well Mixed")
+struct_labels <- c("TRUE" = "Structured", "FALSE" = "Well Mixed")
 struct_name <- "Population Structure"
 
 eps_name <- "Public Good Produced"
-eps_labels <- c("TRUE"="Yes", "FALSE"="No")
-eps_colors <- c("TRUE"="black", "FALSE"="grey60")
-eps_shapes <- c("TRUE"=19, "FALSE"=1)
+eps_labels <- c("TRUE" = "Yes", "FALSE" = "No")
+eps_colors <- c("TRUE" = "black", "FALSE" = "grey60")
+eps_shapes <- c("TRUE" = 19, "FALSE" = 1)
 
 type_name <- "Type"
-type_colors <- c("Cooperator"="black", "Cheater"="grey60")
+type_colors <- c("Cooperator" = "black", "Cheater" = "grey60")
 
 # Cholera plots ---------------------------------------------------------------
 label_loglb_concentration <- expression(paste(Log[2], " LB Concentration"))
@@ -35,7 +35,6 @@ label_growth_environment <- "Environment"
 label_treatment <- "Population Composition"
 
 strain_name <- "Strain"
-strain_labels <- c("7d"="Evolved", "WT"="Ancestor (WT)")
-strain_shapes <- c("7d"=19, "WT"=1)
-strain_colors <- c("7d"="black", "WT"="grey60")
-
+strain_labels <- c("7d" = "Evolved", "WT" = "Ancestor (WT)")
+strain_shapes <- c("7d" = 19, "WT" = 1)
+strain_colors <- c("7d" = "black", "WT" = "grey60")

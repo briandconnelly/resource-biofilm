@@ -26,5 +26,5 @@ ptraj <- ggplot(data = coopdata,
     theme(strip.text.y = element_text(angle = 0))
 
 ggsave(filename = "figures/avida_cooperators_trajectories.pdf", plot = ptraj)
-
-#system("pdfcrop --margins 1 figures/avida_cooperators_trajectories.pdf figures/avida_cooperators_trajectories.pdf")
+trim_whitespace(filename = "figures/avida_cooperators_trajectories.pdf",
+                margins = 1)

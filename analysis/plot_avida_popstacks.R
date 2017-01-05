@@ -24,5 +24,4 @@ p_stack <- ggplot(data = alldata,
     theme(aspect.ratio = 2 / (1 + sqrt(5)))
 
 ggsave(filename = "figures/avida_population_stacks.pdf", plot = p_stack)
-
-#system("pdfcrop --margins 1 figures/avida_population_stacks.pdf figures/avida_population_stacks.pdf")
+trim_whitespace(filename = "figures/avida_population_stacks.pdf", margins = 1)
