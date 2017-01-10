@@ -25,6 +25,6 @@ pspatialpop <- ggplot(data = dspatialpop,
     theme(aspect.ratio = 1) +
     theme(panel.border = element_rect(fill = NA, color = "grey30"))
 
-ggsave(filename = "figures/avida_population_r30_49685.pdf", plot = pspatialpop)
+ggsave(filename = "figures/avida_population_r30_49685.pdf", plot = pspatialpop, width = 5)
 trim_whitespace(filename = "figures/avida_population_r30_49685.pdf",
-                margins = 1)
+                margins = 3)

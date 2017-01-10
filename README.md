@@ -1,6 +1,6 @@
 # Materials for *Resource Abundance and the Critical Transition to Cooperation*
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.236468.svg)](https://doi.org/10.5281/zenodo.236468)
 [![DOI](https://img.shields.io/badge/Paper-10.1111%2Fjeb.13039-blue.svg)](https://dx.doi.org/10.1111/jeb.13039)
 
 This repository contains data, configuration files, and analysis scripts related to *[Resource Abundance and the Critical Transition to Cooperation](https://dx.doi.org/10.1111/jeb.13039)*.
