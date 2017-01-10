@@ -11,12 +11,15 @@ This directory contains analysis and plotting scripts.
 - [png](https://cran.r-project.org/package=png) (version 0.1-7 used)
 - [grid](https://cran.r-project.org/package=grid) (version 3.3.2 used)
 - [scales](https://cran.r-project.org/package=scales) (version 0.4.1 used)
+- [stringr](https://cran.r-project.org/package=stringr) (version 1.1.0 used)
+- [gganimate](https://github.com/dgrtwo/gganimate) (version 0.1 used) - *only required for Video S1*
 
 These packages can be installed using the following commands in R:
 
 ```r
-install.packages(c("cowplot", "tidyverse", "png", "grid", "scales", "devtools"))
+install.packages(c("cowplot", "tidyverse", "png", "grid", "scales", "stringr", "devtools"))
 devtools::install_github("briandconnelly/ggplot2bdc")
+devtools::install_github("dgrtwo/gganimate")
 ```
 
 ## License

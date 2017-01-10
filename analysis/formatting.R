@@ -21,6 +21,7 @@ eps_shapes <- c("TRUE" = 19, "FALSE" = 1)
 
 type_name <- "Type"
 type_colors <- c("Cooperator" = "black", "Cheater" = "grey60")
+cell_colors <- c("Empty" = "white", "Cooperator" = "black", "Cheater" = "grey60")
 
 # Cholera plots ---------------------------------------------------------------
 label_loglb_concentration <- expression(paste(Log[2], " LB Concentration"))
